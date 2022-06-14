@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Job Title Classifier</title>
+
+    <style>
+      .btn {padding: 5px; font-size: 16pt; margin-right: 20px;}
+      .form-inline {margin-left: 100px; margin-top: 50px;}
+      .form-control {padding-left: 20px; margin-left: 0px; padding-top: 10px; padding-bottom: 10px; padding-right: 80px;}
+      .form-control-plaintext {margin-right: 0px; font-size: 20pt; padding-right: 5px; font-weight: bold; width: 180px;}
+      body {bottom: 0;}
+      .jumbotron-fluid {border-radius: 20px; bottom: 0; margin-bottom: 0px;}
+    </style>
+  </head>
+  <body>
+    <!-- Image and text -->
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#" style="font-size: 20pt;">
+        <img src="static/the_badge.png" width="50" height="50" class="d-inline-block align-top" alt="">
+        &nbsp; &nbsp; &nbsp;  Nader Elhadedy ...
+        </a>
+        <div>
+          <a href="#" class="btn btn-outline-success">Regression</a>
+          <a href="#" class="btn btn-outline-danger active">Classification</a>
+          <a href="#" class="btn btn-outline-warning">Clustering</a>
+          <a href="#" class="btn btn-outline-info" style="margin-right: 150px;">Association</a>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">Welcome to our classification service</h1>
+              <p class="lead">This service is based on a classification model that classifies a job title and tells to which industry it belogns.</p>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-dark btn-lg" data-toggle="modal" data-target="#exampleModalCenter">
+                Get more info
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Classification Model</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      Name: Linear SVM<br>
+                      Input: Job title<br>
+                      Output: Industry<br>
+                      Classes: IT, Education, Marketing, Accountancy
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br><hr>
+          <form class="form-inline" method="POST">
+            <div class="form-group mb-2">
+              <label for="staticEmail2" class="sr-only">job title</label>
+              <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Your job title">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="inputPassword2" class="sr-only">job_title</label>
+              <input name="entered_job", type="text" class="form-control" id="inputPassword2" placeholder="Enter job title here">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Predict</button>
+          </form>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
